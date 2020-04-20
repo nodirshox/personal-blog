@@ -13,7 +13,7 @@ a {
 .container {
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 100px auto 100px;
+    grid-template-rows: 80px auto 100px;
     grid-template-areas: 
     "hd"
     "ct"
@@ -32,7 +32,6 @@ a {
     position: sticky;
     background-color: #fff;
     top: 0;
-    line-height: 45px;
 }
 #title {
     font-size: 30px;
@@ -171,6 +170,7 @@ article {
     box-sizing: border-box;
     border-radius: 5px;
     justify-content: center;
+    padding: 10px;
 }
 .author-image {
     grid-area: image-section;
@@ -183,5 +183,4 @@ article {
 }
 .content-area {
     grid-area: text-section;
-    padding: 10px;
 }
