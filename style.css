@@ -176,11 +176,14 @@ article {
     grid-area: image-section;
 }
 #author {
-    width: 100px;
+    width: 80px;
     height: auto;
     display: flex;
     align-items: center;
 }
 .content-area {
     grid-area: text-section;
+    padding: 1px;
+    display: flex;
+    align-items: center;
 }
