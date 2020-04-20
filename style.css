@@ -105,7 +105,7 @@ nav.navigation {
     grid-area: title;
     line-height: 106%;
     color: #171717;
-    font-size: 1.8rem;
+    font-size: 1rem;
 }
 #read-more {
     grid-area: btn;
@@ -152,5 +152,5 @@ figcaption {
     text-align: center;
 }
 article {
-    padding: 0 25px;
+    padding: 0 5px;
 }
