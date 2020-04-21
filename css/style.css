@@ -1,0 +1,89 @@
+@import url("navigation.css");
+@import url("footer.css");
+@import url("post.css");
+
+* {
+    margin:0; 
+    padding:0;
+}
+body {
+    font-family: sans-serif;
+    font-size: 15px;
+    background-color: #F4F4F4;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 80px auto 100px;
+    grid-template-areas: 
+    "hd"
+    "ct"
+    "ft"
+}
+.box {
+    border: 0px solid red;
+}
+
+.content {
+    background-color: #ffffff;
+    grid-area: ct;
+    padding: 25px 25px;
+    display: grid;
+    grid-gap: 10px;
+}
+.card {
+    display: grid;
+    grid-template-columns: 170px auto;
+    grid-template-areas: 
+    "img"
+    "text";
+}
+#bg {
+    background: #FFFFFF;
+    border: 1px solid #DCDCDC;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+}
+.post-image {
+    grid-area: img;
+}
+.card__img {
+    object-fit: cover;
+    width: 150px;
+    padding: 10px
+}
+.post {
+    padding: 10px 10px;
+    display: grid;
+    grid-template-rows: 25% auto 25%;
+    justify-content: space-between;
+    grid-template-areas: 
+    "cat"
+    "title"
+    "btn";
+}
+#cat {
+    grid-area: cat;
+    color: rgba(23, 23, 23, 0.74);
+    font-size: 1.1rem;
+}
+#main-text {
+    grid-area: title;
+    line-height: 106%;
+    color: #171717;
+    font-size: 1rem;
+}
+#read-more {
+    grid-area: btn;
+
+}
+#read-more-button {
+    color: #3E0DA6;
+    font-size: 1.5rem;
+    background-color: #ffffff;
+    border: 0px;
+}

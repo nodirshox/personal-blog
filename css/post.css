@@ -1,0 +1,57 @@
+/* post */
+#post-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+p {
+    line-height: 21px;
+    color: #3F3F3F;
+    margin: 10px 0;
+}
+#post-image {
+    width: 100%;
+    height: auto;
+}
+figcaption {
+    color: #919191;
+    font-size: 1rem;
+    text-align: center;
+}
+article {
+    padding: 0 5px;
+}
+#about {
+    color: #4A4A4A;
+}
+.about-section > #about {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.bio {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-areas: 
+    "image-section text-section text-section";
+    background: #FBFBFB;
+    border: 1px solid rgba(184, 184, 184, 0.5);
+    box-sizing: border-box;
+    border-radius: 5px;
+    justify-content: center;
+    padding: 10px;
+}
+.author-image {
+    grid-area: image-section;
+}
+#author {
+    width: 80px;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+.content-area {
+    grid-area: text-section;
+    padding: 1px;
+    display: flex;
+    align-items: center;
+}
