@@ -2,6 +2,35 @@
 @import url("footer.css");
 @import url("post.css");
 
+@media only screen and (max-width: 600px) {
+    nav.navigation {
+        display: none;
+    }
+    .content {
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        "cards"
+        "archives";
+        grid-gap: 20px;
+        padding: 25px 15px;
+    }
+    .header {
+        padding: 0px 15px;
+    }
+}
+@media (min-width: 601px) {
+.content {
+    grid-template-columns: 60% auto;
+    justify-content: space-around;
+    grid-template-areas: 
+    "cards archives";
+    grid-gap: 5px;
+    padding: 25px 50px;
+}
+.header {
+    padding: 0px 50px;
+}
+}
 * {
     margin:0; 
     padding:0;
@@ -9,15 +38,18 @@
 body {
     font-family: sans-serif;
     font-size: 15px;
-    background-color: #F4F4F4;
+    background-color: #FAFAFA;
 }
 a {
     text-decoration: none;
 }
-.container {
+a:hover {
+    text-decoration: underline;
+}
+.containers {
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 80px auto 100px;
+    grid-template-rows: 80px auto 80px;
     grid-template-areas: 
     "hd"
     "ct"
@@ -30,46 +62,62 @@ a {
 .content {
     background-color: #ffffff;
     grid-area: ct;
-    padding: 25px 25px;
     display: grid;
-    grid-gap: 10px;
 }
+.sections {
+    color: #3F3F3F;
+    font-size: 24px;
+}
+.cards {
+    grid-area: cards
+}
+.archives {
+    grid-area: archives
+}
+.months {
+    list-style-type: none;
+    font-size: 15px;
+}
+.months > li a {
+    color: #3F3F3F;
+    font-size: 15px;
+    
+}
+
 .card {
     display: grid;
-    grid-template-columns: 170px auto;
+    margin: 12px 0;
+    grid-template-columns: 80px auto;
     grid-template-areas: 
     "img"
     "text";
 }
 #bg {
     background: #FFFFFF;
-    border: 1px solid #DCDCDC;
-    box-sizing: border-box;
-    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.15);
-    border-radius: 5px;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
 }
 .post-image {
     grid-area: img;
+    align-items: center;
 }
 .card__img {
-    object-fit: cover;
-    width: 150px;
-    padding: 10px
+    width: 40px;
+    height: auto;
+    padding: 10px;
 }
 .post {
     padding: 10px 10px;
     display: grid;
-    grid-template-rows: 25% auto 25%;
     justify-content: space-between;
     grid-template-areas: 
     "cat"
-    "title"
-    "btn";
+    "title";
 }
 #cat {
     grid-area: cat;
-    color: rgba(23, 23, 23, 0.74);
-    font-size: 1.1rem;
+    color: rgba(0, 0, 0, 0.41);
+    font-size: 15px;
 }
 #main-text {
     grid-area: title;
@@ -77,10 +125,7 @@ a {
     color: #171717;
     font-size: 1rem;
 }
-#read-more {
-    grid-area: btn;
 
-}
 #read-more-button {
     color: #3E0DA6;
     font-size: 1.5rem;

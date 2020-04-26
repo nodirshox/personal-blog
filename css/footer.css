@@ -2,15 +2,11 @@
 .footer {
     grid-area: ft;
     text-align: center;
-    background-color: #F4F4F4;
-    padding: 20px 0px;
-    border-top: 1px solid #C1C1C1;
+    background-color: #FAFAFA;
+    padding: 17px 0px;
+    border-top: 2px solid #EDEDED;
 }
-#footer-nav a{
-    color: #4A4A4A;
-    font-size: 1.2rem;
-    margin: 0 10px;
-}
+
 #sitename {
     color: #919191;
     font-size: 0.95rem;

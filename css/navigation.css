@@ -1,28 +1,33 @@
 /* Navigation bar */
+
 .header {
     grid-area: hd;
     box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.05);
-    padding: 25px 40px;
     display: flex;
     justify-content: space-between;
     position: sticky;
     background-color: #fff;
     top: 0;
+    line-height: 70px;
 }
 #title {
-    font-size: 30px;
-    color: rgba(0, 0, 0, 0.73);
+    font-size: 27px;
+    color: #3F3F3F;
 }
 #title a{
     vertical-align: middle;
     color: rgba(0, 0, 0, 0.73);
 }
 .navigation a{
-    font-size: 1.2rem;
-    margin: 0 20px;
+    font-size: 1rem;
+    margin: 0 15px;
     color: rgba(0, 0, 0, 0.73);
 }
+.navigation a:hover {
+    text-decoration: underline;
+}
 nav.navigation {
+    vertical-align: middle;
     display: inline-block;
 }
 #search {
