@@ -17,6 +17,9 @@
     .header {
         padding: 0px 15px;
     }
+    .content-blog {
+        padding: 20px 15px;
+    }
 }
 @media (min-width: 601px) {
 .content {
@@ -29,6 +32,9 @@
 }
 .header {
     padding: 0px 100px;
+}
+.content-blog {
+    padding: 20px 100px;
 }
 }
 * {
