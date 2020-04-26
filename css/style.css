@@ -145,5 +145,12 @@ a:hover {
 }
 .read-more a {
     color: #3E0DA6;;
-    font-weight: bold;
+    font-weight: 700;
+}
+#next a{
+    font-weight: 600;
+    color: #3E0DA6;
+}
+#older {
+    color: #C2C2C2;
 }
