@@ -74,9 +74,13 @@ a:hover {
 .archives {
     grid-area: archives
 }
-.months {
+.arch-link a{
+    font-size: 15px;
+}
+.months li{
     list-style-type: none;
     font-size: 15px;
+    margin: 10px 0;
 }
 .months > li a {
     color: #3F3F3F;
@@ -112,9 +116,11 @@ a:hover {
     padding: 10px 10px;
     display: grid;
     justify-content: space-between;
+    grid-gap: 9px;
     grid-template-areas: 
     "cat"
-    "title";
+    "title"
+    "read-more";
 }
 #cat {
     grid-area: cat;
@@ -128,9 +134,10 @@ a:hover {
     font-size: 1rem;
 }
 
-#read-more-button {
-    color: #3E0DA6;
-    font-size: 1.5rem;
-    background-color: #ffffff;
-    border: 0px;
+.read-more {
+    grid-area: read-more;
+}
+.read-more a {
+    color: #3E0DA6;;
+    font-weight: bold;
 }
