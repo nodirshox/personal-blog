@@ -8,7 +8,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+    <header class="topnav" id="myTopnav">
+        <span id="title" class="nav-text"><a href="#">Nodirbek Blog</a></span>
+            <a href="#" class="nav-text">About</a>
+            <a href="#" class="nav-text">Blog</a>
+            <a href="#" class="nav-text">Portfolio</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <img src="assets/images/menu.png" alt="menu">
+            </a>
+        </header>
     <div class="container">
+        <!--
         <header class="box header">
             <span id="title"><a href="#">Nodirbek Blog</a></span>
             <nav class="navigation">
@@ -16,7 +26,7 @@
                 <a href="#">Blog</a>
                 <a href="#">Portfolio</a>
             </nav>
-        </header>
+        </header> -->
         <div class="box content">
             <div class="cards">
                 <span class="sections">Latest posts</span>
@@ -58,5 +68,15 @@
             <div id="sitename">Nodirbek.com</div>
         </footer>
     </div>
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+    </script>
 </body>
 </html>

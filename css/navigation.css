@@ -29,6 +29,24 @@ nav.navigation {
     vertical-align: middle;
     display: inline-block;
 }
-#search {
-    opacity: 0.73;
-}
+
+/*  */
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: rgba(0, 0, 0, 0.73);
+    text-align: center;
+    padding: 14px 12px;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .topnav a:hover {
+      text-decoration: underline;
+  }
+  
+  
+  .topnav .icon {
+    display: none;
+  }
