@@ -1,38 +1,5 @@
 /* Navigation bar */
-
-.header {
-    grid-area: hd;
-    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.05);
-    display: flex;
-    justify-content: space-between;
-    position: sticky;
-    background-color: #fff;
-    line-height: 70px;
-}
-#title {
-    font-size: 27px;
-    color: #3F3F3F;
-}
-#title a{
-    vertical-align: middle;
-    color: rgba(0, 0, 0, 0.73);
-}
-.navigation a{
-    font-size: 1rem;
-    margin: 0 15px;
-    color: rgba(0, 0, 0, 0.73);
-}
-.navigation a:hover {
-    text-decoration: underline;
-}
-nav.navigation {
-    vertical-align: middle;
-    display: inline-block;
-}
-
-/*  */
-  
-  .topnav a {
+.topnav a {
     float: left;
     display: block;
     color: rgba(0, 0, 0, 0.73);
@@ -40,13 +7,12 @@ nav.navigation {
     padding: 14px 12px;
     text-decoration: none;
     font-size: 1rem;
-  }
-  
-  .topnav a:hover {
-      text-decoration: underline;
-  }
-  
-  
-  .topnav .icon {
+}
+
+.topnav a:hover {
+    text-decoration: underline;
+}
+
+.topnav .icon {
     display: none;
-  }
+}
