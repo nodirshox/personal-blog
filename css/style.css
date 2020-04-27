@@ -103,7 +103,7 @@ a:hover {
     "text";
 }
 
-#bg {
+.bg {
     background: #FFFFFF;
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
     border-radius: 2px;
@@ -128,12 +128,12 @@ a:hover {
     "title"
     "read-more";
 }
-#cat {
+.cat {
     grid-area: cat;
     color: rgba(0, 0, 0, 0.41);
     font-size: 15px;
 }
-#main-text {
+.main-text {
     grid-area: title;
     line-height: 106%;
     color: #171717;
