@@ -22,10 +22,7 @@ figcaption {
     text-align: center;
 }
 
-#about {
-    color: #4A4A4A;
-}
-.about-section > #about {
-    text-align: center;
-    margin-bottom: 10px;
+.time {
+    font-size: 0.9rem;
+    color: #919191;
 }
