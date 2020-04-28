@@ -4,15 +4,24 @@
     display: block;
     color: rgba(0, 0, 0, 0.73);
     text-align: center;
-    padding: 14px 12px;
+    padding: 14px 11px;
     text-decoration: none;
-    font-size: 1rem;
 }
-
+.topnav {
+    border-bottom: 1px solid rgb(214, 214, 214, 0.5);
+    background-color: #ffffff;
+}
 .topnav a:hover {
     text-decoration: underline;
 }
 
 .topnav .icon {
     display: none;
+}
+.title{
+    font-size: 27px;
+}
+
+#menu-button {
+    margin: 5px 5px 0 0;
 }
