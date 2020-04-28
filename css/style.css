@@ -83,10 +83,11 @@ a {
 a:hover {
     text-decoration: underline;
 }
-.containers {
+
+.container {
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: auto 80px;
+    grid-template-rows: auto auto;
     grid-template-areas: 
     "ct"
     "ft"
