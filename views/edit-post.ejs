@@ -1,0 +1,17 @@
+<%- include('includes/header') %>
+<div class="content-blog">
+    <span class="sections">Edit post</span>
+    <div class="form-controller">
+        <form action='/edit-post/<%= post._id %>' method="POST">
+            <label>Title</label><br />
+            <input type="text" name="title" value="<%= post.title %>" autocomplete="off" required>
+            <label>Body</label>
+            <textarea name="body" rows="4" cols="50" required><%= post.body %></textarea>
+            <img src="<%= post.thumbnail %>" alt="post image" id="img-edit"><br />
+            <label>Post image(URL)</label>
+            <input type="text" name="thumbnail" value="<%= post.thumbnail %>" autocomplete="off" required>
+            <input type="submit" value="UPDATE">
+        </form>
+    </div>
+</div>
+<%- include('includes/footer') %>

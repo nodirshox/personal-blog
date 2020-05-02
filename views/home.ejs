@@ -1,0 +1,26 @@
+<%- include('includes/header') %>
+<div class="box content">
+    <div class="cards">
+        <span class="sections">Latest posts</span>
+        <% post.map((post) => { %>
+            <div class="card bg">
+                <div class="post-image"><img src="<%= post.thumbnail %>" alt="post" class="card__img"></div>
+                <div class="post">
+                    <div class="cat"><%= post.date.toLocaleDateString() %></div>
+                    <div class="main-text"><%= post.title %></div>
+                    <div class="read-more"><a href="/post/<%= post._id %>">Read more</a></div>
+                </div>
+            </div>
+        <%  }) %>
+        <span id="older">Previous</span> | <a href="#" id="next">Next</a>
+    </div>
+    <div class="archives">
+        <span class="sections">Archives</span>
+        <ul class="months">
+            <li class="arch-link"><a href="#" >May</a></li>
+            <li><a href="#" class="arch-link">April</a></li>
+        </ul>
+    </div>
+</div>
+
+<%- include('includes/footer') %>

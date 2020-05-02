@@ -1,0 +1,16 @@
+<%- include('includes/header') %>
+<div class="content-blog">
+    <span class="sections">New post</span>
+    <div class="form-controller">
+        <form action='/new-post' method="POST">
+            <label>Title</label><br />
+            <input type="text" name="title" autocomplete="off" required>
+            <label>Body</label>
+            <textarea name="body" required></textarea>
+            <label>Post image(URL)</label>
+            <input type="text" name="thumbnail" placeholder="http://example.com/post.jpg" autocomplete="off" required>
+            <input type="submit" value="POST">
+        </form>
+    </div>
+</div>
+<%- include('includes/footer') %>

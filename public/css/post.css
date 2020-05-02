@@ -1,0 +1,33 @@
+/* post */
+#post-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 10px 0;
+}
+p {
+    line-height: 21px;
+    color: #3F3F3F;
+    margin: 10px 0;
+}
+.content-blog {
+    background-color: white;
+}
+#post-image {
+    width: 100%;
+    height: auto;
+}
+figcaption {
+    color: #919191;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.time {
+    font-size: 0.9rem;
+    color: #919191;
+}
+#img-edit {
+    width: 50px;
+    height: 50px;
+}

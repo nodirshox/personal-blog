@@ -1,0 +1,9 @@
+<%- include('includes/header') %>
+    <div class="box content-blog">
+        <article id="post">
+            <h1 id="post-title"><%= post.title %></h1>
+            <span class="time"><%= time %> by <em>Nodirbek Ergashev</em> <a href="/edit-post/<%= post._id %>">Edit</a> | <a href="/delete-post/<%= post._id %>">Delete</a></span>
+            <%- newbody %>
+        </article>
+    </div>
+<%- include('includes/footer') %>

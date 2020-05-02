@@ -1,0 +1,34 @@
+{
+  "name": "personal-blog",
+  "version": "1.0.0",
+  "description": "live: https://blog-nodejs-easy.herokuapp.com/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nodirshox/personal-blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nodirshox/personal-blog/issues"
+  },
+  "homepage": "https://github.com/nodirshox/personal-blog#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dateformat": "^3.0.3",
+    "ejs": "^3.1.2",
+    "express": "^4.17.1",
+    "marked": "^1.0.0",
+    "mongodb": "^3.5.7",
+    "mongoose": "^5.9.11",
+    "sanitize-html": "^1.23.0"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.3"
+  }
+}

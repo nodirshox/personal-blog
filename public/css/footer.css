@@ -1,0 +1,13 @@
+/* Footer */
+.footer {
+    grid-area: ft;
+    text-align: center;
+    background-color: #FAFAFA;
+    padding: 17px 0px;
+    border-top: 1px solid #EDEDED;
+}
+
+#sitename {
+    color: #919191;
+    font-size: 0.95rem;
+}
