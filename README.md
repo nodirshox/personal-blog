@@ -1,5 +1,4 @@
 # personal-blog
-Assignmen for FrontEnd NanoDegree program by Udacity
 
 
-live: https://blogudemy.netlify.app/
+live: https://blog-nodejs-easy.herokuapp.com/
