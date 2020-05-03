@@ -167,6 +167,10 @@ img {
     grid-template-columns: auto 80px;
     grid-template-areas: 
     "text img";
+    cursor: pointer;
+}
+.card:hover {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
 
 .bg {

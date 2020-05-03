@@ -4,7 +4,7 @@
     <div class="cards">
         <span class="sections">Latest posts</span>
         <% post.map((post) => { %>
-            <div class="card bg">
+            <div class="card bg" onclick="location.href='/post/<%= post._id %>';">
                 <div class="post-image"><img src="<%= post.thumbnail %>" alt="post" class="card__img"></div>
                 <div class="post">
                     <div class="cat"><%= post.date.toLocaleDateString() %></div>

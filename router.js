@@ -47,6 +47,7 @@ router.post('/new-post', async (req, res) => {
           await post.save()
           res.redirect('/')
         } catch(err) {
+          console.log(err)
           res.render('error-page', { err })
         }
       } else {
@@ -117,11 +118,28 @@ router.get('/api/posts', async (req, res) => {
   }
 })
 
+// Get one post
+router.get('/api/post/:id', getPost, (req, res) => {
+  res.json(res.post)
+})
 
 // Error handler
 router.get('*', function(req, res) {  
     res.render('404');
 });
 
+async function getPost(req, res, next) {
+  let post
+  try {
+      post = await Post.findById(req.params.id)
+      if(post == null) {
+          return res.status(404).json({ message: 'Can not find post.' })
+      }
+  } catch(err) {
+      res.status(500).json({ message: err.message })
+  }
+  res.post = post
+  next()
+}
 
 module.exports = router
