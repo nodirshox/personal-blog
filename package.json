@@ -4,7 +4,7 @@
   "description": "live: https://blog-nodejs-easy.herokuapp.com/",
   "main": "index.js",
   "scripts": {
-    "watch": "nodemon server.js",
+    "watch": "start server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
