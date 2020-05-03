@@ -4,43 +4,55 @@ const mongoose = require('mongoose')
 const markdown = require('marked')
 const sanitizeHtml = require('sanitize-html')
 const dateFormat = require('dateformat')
+
 //Models
 const Post = require('./models/Post')
 const tags = [ 'b', 'i', 'em', 'strong', 'a', 'u', 'h1', 'h2', 'h3', 'h4', 'br', 'ol', 'ul', 'li', 'img' ];
 
 // Home page
-router.get('/', function(req, res) {
-  Post.find({}).sort('-date').exec((err, post) => {
-    if(err) {
-      res.send('Xatolik yuz berdi')
-    } else {
-      res.render('home', { post })
-    }
-  })
+router.get('/', (req, res) => {
+  try {
+    // Get all posts and display in homepage
+    Post.find({}).sort('-date').exec((err, post) => {
+      if(err) {
+        res.send('Error')
+      } else {
+        res.render('home', { post })
+      }
+    })
+  } catch(err) {
+    res.render('error-page', { err })
+  }
 })
 
-// Add post
+// Add a new post
 router.get('/new-post', function(req, res) {
   res.render('new-post')
 })
-router.post('/new-post', function(req, res) {
-  var body = sanitizeHtml(req.body.body, {
-    allowedTags: tags,
-    allowedAttributes: {
-      'a': [ 'href' ]
-    }
-  }); // sanitize req.body
-  var title = sanitizeHtml(req.body.title);
-  var thumbnail = sanitizeHtml(req.body.thumbnail);
-
-  Post.create({title: title, body: body, thumbnail: thumbnail}, function(err, product) {
-      if(err) {
-        console.log(err)
-        res.send('Xatolik yuz berdi.')
+router.post('/new-post', async (req, res) => {
+      if(req.body.title !== undefined && req.body.body !== undefined && req.body.thumbnail !== undefined) {
+        var body = sanitizeHtml(req.body.body, {
+          allowedTags: tags,
+          allowedAttributes: {
+            'a': [ 'href' ]
+          }
+        }); // sanitize req.body
+        
+        const post = new Post({
+          title: sanitizeHtml(req.body.title),
+          body: body,
+          thumbnail: sanitizeHtml(req.body.thumbnail)
+        })
+        try {
+          await post.save()
+          res.redirect('/')
+        } catch(err) {
+          res.render('error-page', { err })
+        }
       } else {
-        res.redirect('/')
+        res.render('404')
       }
-  })
+        
 })
 
 
@@ -92,9 +104,24 @@ router.get('/delete-post/:id', function(req, res) {
   })
 })
 
+
+// API
+
+// Getting all posts
+router.get('/api/posts', async (req, res) => {
+  try {
+    const posts = await Post.find()
+    res.json(posts)
+  } catch(err) {
+    res.status(500).json({ message: err.message })
+  }
+})
+
+
 // Error handler
 router.get('*', function(req, res) {  
     res.render('404');
 });
+
 
 module.exports = router

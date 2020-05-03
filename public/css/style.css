@@ -164,10 +164,9 @@ img {
 .card {
     display: grid;
     margin: 12px 0;
-    grid-template-columns: 80px auto;
+    grid-template-columns: auto 80px;
     grid-template-areas: 
-    "img"
-    "text";
+    "text img";
 }
 
 .bg {
