@@ -16,3 +16,5 @@ Available routes
 GET /api/posts - Show all posts
 
 GET /api/post/id - Post by ID
+
+POST /api/new-post - Post article

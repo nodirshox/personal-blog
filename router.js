@@ -123,10 +123,29 @@ router.get('/api/post/:id', getPost, (req, res) => {
   res.json(res.post)
 })
 
-// Error handler
-router.get('*', function(req, res) {  
-    res.render('404');
-});
+// Post a new article
+router.post('/api/new-post', async (req, res) => {
+  if(req.body.title !== undefined && req.body.body !== undefined && req.body.thumbnail !== undefined) {
+    var body = sanitizeHtml(req.body.body, {
+      allowedTags: tags,
+      allowedAttributes: {
+        'a': [ 'href' ]
+      }
+    }); // sanitize req.body
+    const post = new Post({
+        title: sanitizeHtml(req.body.title),
+        body: body,
+        thumbnail: sanitizeHtml(req.body.thumbnail)
+    })
+    try {
+        const newPost = await post.save()
+        res.status(201).json(newPost)
+    } catch(err) {
+        res.status(400).json({ message: err.message })
+    }
+  } else { res.status(400).json({ message: "You missed something" }) }
+})
+
 
 async function getPost(req, res, next) {
   let post
@@ -141,5 +160,10 @@ async function getPost(req, res, next) {
   res.post = post
   next()
 }
+
+// Error handler
+router.get('*', function(req, res) {  
+  res.render('404');
+});
 
 module.exports = router
