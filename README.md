@@ -13,8 +13,12 @@ I used NodeJS for backend and Mongodb for database. I improve this project step 
 ## API
 Available routes
 
-GET /api/posts - Show all posts
+GET /api/posts - Show all article
 
-GET /api/post/id - Post by ID
+GET /api/post/id - Article by ID
 
 POST /api/new-post - Post article
+
+POST /api/edit-post/id - Edit article
+
+GET /api/delete-post/id - Delete article
