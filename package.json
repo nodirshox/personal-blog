@@ -27,7 +27,7 @@
     "marked": "^1.0.0",
     "mongodb": "^3.5.7",
     "mongoose": "^5.9.11",
-    "sanitize-html": "^1.23.0"
+    "sanitize-html": "^2.3.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.3"
